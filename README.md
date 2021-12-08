@@ -9,6 +9,7 @@ HTML
 1. [HTML 소개](https://github.com/tinskyblue/HTML-CSS_Concept_Note/blob/master/concept_Note/HTML_introduce.md)
 2. [시맨틱 태그](https://github.com/tinskyblue/HTML-CSS_Concept_Note/blob/master/concept_Note/HTML_semantic_tag.md)
 3. [HTML 기초](https://github.com/tinskyblue/HTML-CSS_Concept_Note/blob/master/concept_Note/HTML_basics.md)
+4. [글자와 관련된 태그](https://github.com/tinskyblue/HTML-CSS_Concept_Note/blob/master/concept_Note/HTML_text.md)
 
 CSS
 
