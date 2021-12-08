@@ -20,10 +20,10 @@
 
 과정
 ```
-<a 주소="https://github.com/tinskyblue/HTML-CSS_Concept_Note" 설명="HTML-CSS_Concept_Note 메인">HTML-CSS_Concept_Note</a>
+<a href="https://github.com/tinskyblue/HTML-CSS_Concept_Note" 설명="HTML-CSS_Concept_Note 메인">HTML-CSS_Concept_Note</a>
 ```
   
 결과
 <pre>
-<a 주소="https://github.com/tinskyblue/HTML-CSS_Concept_Note" 설명="HTML-CSS_Concept_Note 메인">HTML-CSS_Concept_Note</a>
+<a href="https://github.com/tinskyblue/HTML-CSS_Concept_Note" 설명="HTML-CSS_Concept_Note 메인">HTML-CSS_Concept_Note</a>
 </pre>
