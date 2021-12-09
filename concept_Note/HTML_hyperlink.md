@@ -39,3 +39,20 @@
 
 ## `<a>`의 속성, target
 
+**target** 속성은 링크를 클릭했을 때 해당 페이지를 어디에서 열지 정하는 속성입니다.<br>
+**target** 속성에서 사용할 수 있는 대표 값은 _self와 _blank 입니다.<br>
+
+- targt="_self" 는 현재 탭에서 링크를 엽니다.
+- target="_blank" 는 새 탭 혹은 새 창에서 링크를 엽니다.
+
+과정
+```
+<a href="https://github.com/tinskyblue/HTML-CSS_Concept_Note" target="_self">HTML-CSS_Concept_Note_self</a>
+<a href="https://github.com/tinskyblue/HTML-CSS_Concept_Note" target="_blank">HTML-CSS_Concept_Note_blank</a>
+```
+
+결과
+<pre>
+<a href="https://github.com/tinskyblue/HTML-CSS_Concept_Note" target="_self">HTML-CSS_Concept_Note_self</a>
+<a href="https://github.com/tinskyblue/HTML-CSS_Concept_Note" target="_blank">HTML-CSS_Concept_Note_blank</a>
+</pre>
