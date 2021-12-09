@@ -42,24 +42,26 @@ href 속성을 사용해서 `<a>`는 `https://github.com/tinskyblue/HTML-CSS_Con
 **target** 속성은 링크를 클릭했을 때 해당 페이지를 어디에서 열지 정하는 속성입니다.<br>
 **target** 속성에서 사용할 수 있는 대표 값은 _self와 _blank 입니다.<br>
 
-- targt="_self" 는 현재 탭에서 링크를 엽니다.
-- target="_blank" 는 새 탭 혹은 새 창에서 링크를 엽니다.
+- `target="_self"` 는 현재 탭에서 링크를 엽니다.
+- `target="_blank"` 는 새 탭 혹은 새 창에서 링크를 엽니다.
+- `_parent` - 부모 프레임에서 링크된 문서를 엽니다.
+- `_top` - 윈도우의 full body에서 링크된 문서를 엽니다.
+- *framename* - 명명된 프레임에서 링크된 문서를 엽니다.
 
 target="_blank"는 tabnabbing 피싱 공격에 취약하기 때문에 rel="noreferrer noopener" 속성을 같이 사용해야합니다.<br>
-tabnabbing이란 target="_blank"에 의해 열린 새 페이지에서 window.opener.location을 변경하여, 기존 페이지를 피싱 페이지로 변경해 사용자 정보를 탈취하는 것입니다
+
+`<a href="주소" target="_blank" rel="noreferrer noopener">HTML-CSS_Concept_Note_blank</a>`<br>
+
+tabnabbing이란 target="_blank"에 의해 열린 새 페이지에서 window.opener.location을 변경하여, 기존 페이지를 피싱 페이지로 변경해 사용자 정보를 탈취하는 것입니다.
 - `noopener` 해당 타입을 사용하면 현재 탭을 열었던 탭의 참조를 없앱니다. 즉, 새 탭에서 Window.opener 속성이 null 값을 반환합니다.
 - `noreferrer` 해당 타입을 사용해도 Window.opener 속성이 null 값을 반환합니다. 또한 다른 페이지로 이동할 때 브라우저가 HTTP 헤더에 referer로 이 페이지 주소 또는 다른 값을 전송하지 못하도록 차단합니다. 때문에 새 탭을 요청한 이전 탭이 무엇인지 알 수 없게 됩니다.
 
 과정
 ```
 <a href="https://github.com/tinskyblue/HTML-CSS_Concept_Note/" target="_self">HTML-CSS_Concept_Note_self</a>
-<a href="https://github.com/tinskyblue/HTML-CSS_Concept_Note/" target="_blank" rel="noreferrer noopener">HTML-CSS_Concept_Note_blank</a>
 ```
 
 결과
 <pre>
 <a href="https://github.com/tinskyblue/HTML-CSS_Concept_Note/" target="_self">HTML-CSS_Concept_Note_self</a>
-<code><a href="https://github.com/tinskyblue/HTML-CSS_Concept_Note/" target="_blank" rel="noreferrer noopener">HTML-CSS_Concept_Note_blank</a></code>
 </pre>
-
-<code>[HTML-CSS_Concept_Note_self](https://github.com/tinskyblue/HTML-CSS_Concept_Note)</code>
