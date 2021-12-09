@@ -59,6 +59,7 @@ tabnabbing이란 target="_blank"에 의해 열린 새 페이지에서 window.ope
 결과
 <pre>
 <a href="https://github.com/tinskyblue/HTML-CSS_Concept_Note/" target="_self">HTML-CSS_Concept_Note_self</a>
-<a href="https://github.com/tinskyblue/HTML-CSS_Concept_Note/" target="_blank" rel="noreferrer noopener">HTML-CSS_Concept_Note_blank</a>
+<code><a href="https://github.com/tinskyblue/HTML-CSS_Concept_Note/" target="_blank" rel="noreferrer noopener">HTML-CSS_Concept_Note_blank</a></code>
 </pre>
 
+<code>[HTML-CSS_Concept_Note_self](https://github.com/tinskyblue/HTML-CSS_Concept_Note)</code>
