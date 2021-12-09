@@ -22,19 +22,19 @@
 
 `<a>` 태그는 태그, 콘텐츠 이외에 href 라는 속성을 함께 사용해야 올바르게 동작합니다.<br>
 **href** 는 **Hypertext Reference** 의 약자로 `<a>`가 참조하는 웹 사이트 주소(경로)를 값으로 가집니다.<br>
-예시로 `<a>`는 https://github.com/tinskyblue/HTML-CSS_Concept_Note 라는 사이트를 연결하고 있다는 정보를 담습니다.<br>
+href 속성을 사용해서 `<a>`는 `https://github.com/tinskyblue/HTML-CSS_Concept_Note` 라는 사이트를 연결하고 있다는 정보를 담습니다.<br>
 이 href는 속성칸에 들어가며 속성은 링크 태그의 이름 바로 뒤에 한 칸 공백을 가진 뒤 작성을 해야합니다.
 
 실제로 링크 태그를 작성해보겠습니다.
 
 과정
 ```
-<a href="https://github.com/tinskyblue/HTML-CSS_Concept_Note" 설명="HTML-CSS_Concept_Note 메인">HTML-CSS_Concept_Note</a>
+<a href="https://github.com/tinskyblue/HTML-CSS_Concept_Note/" 설명="HTML-CSS_Concept_Note 메인">HTML-CSS_Concept_Note</a>
 ```
   
 결과
 <pre>
-<a href="https://github.com/tinskyblue/HTML-CSS_Concept_Note" 설명="HTML-CSS_Concept_Note 메인">HTML-CSS_Concept_Note</a>
+<a href="https://github.com/tinskyblue/HTML-CSS_Concept_Note/" 설명="HTML-CSS_Concept_Note 메인">HTML-CSS_Concept_Note</a>
 </pre>
 
 ## `<a>`의 속성, target
@@ -45,14 +45,20 @@
 - targt="_self" 는 현재 탭에서 링크를 엽니다.
 - target="_blank" 는 새 탭 혹은 새 창에서 링크를 엽니다.
 
+target="_blank"는 tabnabbing 피싱 공격에 취약하기 때문에 rel="noreferrer noopener" 속성을 같이 사용해야합니다.<br>
+tabnabbing이란 target="_blank"에 의해 열린 새 페이지에서 window.opener.location을 변경하여, 기존 페이지를 피싱 페이지로 변경해 사용자 정보를 탈취하는 것입니다
+- `noopener` 해당 타입을 사용하면 현재 탭을 열었던 탭의 참조를 없앱니다. 즉, 새 탭에서 Window.opener 속성이 null 값을 반환합니다.
+- `noreferrer` 해당 타입을 사용해도 Window.opener 속성이 null 값을 반환합니다. 또한 다른 페이지로 이동할 때 브라우저가 HTTP 헤더에 referer로 이 페이지 주소 또는 다른 값을 전송하지 못하도록 차단합니다. 때문에 새 탭을 요청한 이전 탭이 무엇인지 알 수 없게 됩니다.
+
 과정
 ```
-<a href="https://github.com/tinskyblue/HTML-CSS_Concept_Note" target="_self">HTML-CSS_Concept_Note_self</a>
-<a href="https://github.com/tinskyblue/HTML-CSS_Concept_Note" target="_blank">HTML-CSS_Concept_Note_blank</a>
+<a href="https://github.com/tinskyblue/HTML-CSS_Concept_Note/" target="_self">HTML-CSS_Concept_Note_self</a>
+<a href="https://github.com/tinskyblue/HTML-CSS_Concept_Note/" target="_blank" rel="noreferrer noopener">HTML-CSS_Concept_Note_blank</a>
 ```
 
 결과
 <pre>
-<a href="https://github.com/tinskyblue/HTML-CSS_Concept_Note" target="_self">HTML-CSS_Concept_Note_self</a>
-<a href="https://github.com/tinskyblue/HTML-CSS_Concept_Note" target="_blank">HTML-CSS_Concept_Note_blank</a>
+<a href="https://github.com/tinskyblue/HTML-CSS_Concept_Note/" target="_self">HTML-CSS_Concept_Note_self</a>
+<a href="https://github.com/tinskyblue/HTML-CSS_Concept_Note/" target="_blank" rel="noreferrer noopener">HTML-CSS_Concept_Note_blank</a>
 </pre>
+
