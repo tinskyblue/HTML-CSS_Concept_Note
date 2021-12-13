@@ -12,6 +12,7 @@ HTML
 4. [글자와 관련된 태그](https://github.com/tinskyblue/HTML-CSS_Concept_Note/blob/master/concept_Note/HTML_text.md/)
 5. [하이퍼링크](https://github.com/tinskyblue/HTML-CSS_Concept_Note/blob/master/concept_Note/HTML_hyperlink.md/)
 6. [이미지 태그](https://github.com/tinskyblue/HTML-CSS_Concept_Note/blob/master/concept_Note/HTML_img_tag.md/)
+7. [오디오와 비디오 태그](https://github.com/tinskyblue/HTML-CSS_Concept_Note/blob/master/concept_Note/HTML_audio_video_teg.md/)
 
 CSS
 
