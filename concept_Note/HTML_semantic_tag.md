@@ -1,6 +1,6 @@
-# HTML Semantic tag란
+# 시맨틱 태그
 
-<p align="center"><img src="https://github.com/tinskyblue/HTML-CSS_Concept_Note/blob/master/concept_Note/images/Semantic%20tag.JPG?raw=true" width="600px" height="450px" title="Semantic tag" alt="Semantic tag"></img></p>
+![Semantic tag](https://user-images.githubusercontent.com/57892556/146439658-3257e954-bb35-4162-ad16-0bb40b67b6f8.jpg)
 
 많은 개발자들이 웹 사이트를 개발할 때 위와 같은 레이아웃을 선호하자 HTML5에서는 해당 레이아웃을 아에 태그로 만들어 각 요소의 쓰임을 명확하게 구분하였습니다.
 이러한 태그를 아울러 시맨틱 태그(Semantic tag)라고 부릅니다.
