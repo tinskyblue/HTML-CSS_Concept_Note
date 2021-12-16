@@ -128,7 +128,6 @@ HyperText Transfer Protocol의 약자로 HTTP 혹은 HTTP 프로토콜이라고 
 `value`는 말 그대로 값을 할당하는 속성이기 때문에 `<input>`에서 `value`에 값을 넣으면 그 값이 입력 칸 안에 나타나는 것은 `placeholder`와 동일하나, 입력 칸을 클릭하더라도 값이 남아 있는 것을 볼 수 있습니다.
 
 ```
-<h3>회원가입</h3>
 <form action="URL" method="get">
 	<div>
 		<label for="userid">아이디: </label>
@@ -161,3 +160,35 @@ HyperText Transfer Protocol의 약자로 HTTP 혹은 HTTP 프로토콜이라고 
 
 `<select>`태그는 `name`이라는 속성을, `<option>`태그는 `value`라는 속성을 필히 가져야합니다.<br>
 `<select>`태그에서는 `<select>`태그의 `name`과 `<option>`태그의 `value`가 서로 짝을 이룹니다.
+
+## textarea 태그
+
+`textarea`태그는 한 번에 많은 양의 글을 입력 받을 때 사용합니다. 
+
+```
+<form>
+	<div>
+		<label for="introduce">자기소개: </label>
+		<textarea name="introduce" id="introduce" placeholder="자기소개를 입력하세요" cols="20" rows="6"></textarea>
+	</div>
+</form>
+```
+
+`<textarea>`태그는 rows랑 cols 속성을 사용할 수 있는데, 값으로 숫자를 넣으면 `<textarea>`의 크기를 조정할 수 있습니다.
+
+## button 태그
+
+`button`태그는 `<input type="button">`으로도 만들 수 있지만 `<button>`태그를 이용하면 HTML 요소를 `<button>`태그 내부에 담아 사용할 수 있다는 장점이 있습니다.<br>
+또한 `type="reset"`을 사용하면 입력 양식을 모두 초기화 할 수 있습니다.
+
+```
+<form>
+	<div>
+		<label for="introduce">자기소개: </label>
+		<textarea name="introduce" id="introduce" placeholder="자기소개를 입력하세요" cols="20" rows="6"></textarea>
+		<button type="submit">제출</button>
+		<input type="reset">
+	</div>
+</form>
+```
+
