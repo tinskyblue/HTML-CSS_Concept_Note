@@ -90,3 +90,27 @@
 	</tr>
 </table>
 ```
+
+표의 구성을 보여주기 위하여 CSS가 적용되어 있습니다.
+실제 브라우저에서는 테두리가 없는 표의 모습으로 나올 것입니다.
+
+CSS 코드
+
+```
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+```
