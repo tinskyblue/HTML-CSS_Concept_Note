@@ -57,9 +57,9 @@
 </table>
 ```
 
-- `<th>` = table heading
-- `<td>` = table data
-- `<tr>` = table row
+- `<th>`: table heading
+- `<td>`: table data
+- `<tr>`: table row
 
 행(`<tr>`)을 기준으로 테이블 태그를 작성해야 편하게 작성할 수 있습니다.
 
