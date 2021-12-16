@@ -125,7 +125,7 @@ HyperText Transfer Protocol의 약자로 HTTP 혹은 HTTP 프로토콜이라고 
 우리가 입력창에서 자주 보았던 '아이디를 입력하세요'와 같은 가이드 문구를 지정하는데 사용하는 속성입니다.<br>
 `placeholder`속성을 사용하여 입력한 값은 입력 칸 안에 나타나며, 입력 칸을 클릭하여 값을 입력하면 해당 문구가 사라지는 것을 볼 수 있습니다.<br>
 `placeholder`속성과 비슷하지만 조금 다른 속성이 하나 더 있습니다, `value`입니다.<br>
-`value`는 말 그대로 값을 할당하는 속성이기 때문에 `<input>`에서 `value`에 값을 넣으면 그 값이 입력 칸 안에 나타나는 것은 `placeholder`와 동일하나, 입력 칸을 클릭하더라도 값이 남아 있는 것을 볼 수 있습니다.<br>
+`value`는 말 그대로 값을 할당하는 속성이기 때문에 `<input>`에서 `value`에 값을 넣으면 그 값이 입력 칸 안에 나타나는 것은 `placeholder`와 동일하나, 입력 칸을 클릭하더라도 값이 남아 있는 것을 볼 수 있습니다.
 
 ```
 <h3>회원가입</h3>
@@ -141,7 +141,23 @@ HyperText Transfer Protocol의 약자로 HTTP 혹은 HTTP 프로토콜이라고 
 </form>
 ```
 
-위 코드를 실행해보면 `type="password"`는 `text`와 다르게 입력 칸에 값을 입력하면 별표로 표시되어 노출되지 않음을 볼 수 있습니다.
-`<label>`태그는 입력 양식의 역할이 무엇인지 알려주는 이름표 역할을 수행합니다.
-`<label>`태그의 `for`속성과 `<input>`태그의 `id`속성 한 세트로 봅니다.
-`<label>`태그에 해당하는 이름표를 클릭하면 입력 칸이 활성화되는 것을 볼 수 있습니다.
+위 코드를 실행해보면 `type="password"`는 `text`와 다르게 입력 칸에 값을 입력하면 별표로 표시되어 노출되지 않음을 볼 수 있습니다.<br>
+`<label>`태그는 입력 양식의 역할이 무엇인지 알려주는 이름표 역할을 수행합니다.<br>
+`<label>`태그의 `for`속성과 `<input>`태그의 `id`속성 한 세트로 봅니다.<br>
+`<label>`태그에 해당하는 이름표를 클릭하면 입력 칸이 활성화되는 것을 볼 수 있습니다.<br>
+
+## select 태그
+
+`<select>`태그는 드롭다운 박스를 만드는 틀이고 `<option>`태그로 드롭다운 내부에 아이템들을 하나씩 넣을 수 있습니다.<br>
+미리 준비된 여러 개의 선택지를 골라 선택할 수 있는 선택 박스(Select box)를 배치하기 위해서는 `<select>`태그를 사용하며, `<select>`태그는 `<option>`태그로 이루어져 있는 각 선택지를 하나로 감싸는 역할을 수행합니다.
+
+```
+<select name="job" id="job">
+	<option value="student">학생</option>
+	<option value="teacher">선생님</option>
+	<option value="etc">기타</option>
+</select>
+```
+
+`<select>`태그는 `name`이라는 속성을, `<option>`태그는 `value`라는 속성을 필히 가져야합니다.<br>
+`<select>`태그에서는 `<select>`태그의 `name`과 `<option>`태그의 `value`가 서로 짝을 이룹니다.
