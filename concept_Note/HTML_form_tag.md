@@ -57,3 +57,89 @@ POST 방식은 주소창에 파라미터가 넘어가는 방식이 아니라 HTT
 HyperText Transfer Protocol의 약자로 HTTP 혹은 HTTP 프로토콜이라고 표현합니다.<br>
 이 HTTP는 '인터넷에서, 웹 서버와 사용자의 인터넷 브라우저 사이에 문서를 전송하기 위해 사용되는 통신 규약'입니다.
 쉽게 웹 서버와 웹 브라우저 사이의 통신에 사용하는 프로토콜이며 **'요청(request)과 응답(response)으로 이루어진 프로토콜'** 이라고 이해하면 됩니다.
+
+## input 태그
+
+`<input>` 태그는 입력 양식 중에서도 가장 많이 쓰이는 태그입니다.<br>
+주로 사용자에게 입력을 받기 위해 사용되며, 빈 태그이기 때문에 종료태그를 사용하지 않습니다.<br>
+`<input>`태그에는 텍스트뿐만 아니라 제출 버튼, 파일 업로드, 날짜 등 다양한 값이 입력 될 수 있습니다.<br>
+`<input>`태그에 type이라는 속성을 설정하여 어떤 값을 입력할 것인지 결정합니다.<br>
+`<input>`태그에는 `type`뿐만 아니라 `name`이라는 속성도 중요합니다.<br>
+사용자가 서버로 데이터를 전송할 때, 입력 받은 데이터를 구분하기 위해 `name` 속성을 키(key)로, 입력 받은 데이타를 값(value)로 전송합니다.<br>
+그렇기 때문에 `name`속성은 전송하는 데이터를 구분하는데 매우 중요한 역할을 합니다.
+
+다양한 값을 입력받을 수 있는 input 태그
+
+```
+<h3>button</h3>
+<input type="button" value="Button">
+<hr>
+
+<h3>search</h3>
+<input type="search" name="search">
+<hr>
+
+<h3>checkbox</h3>
+<input type="checkbox" name="python" value="python" checked>Python<br>
+<input type="checkbox" name="javascript" value="javascript">Javascript<br>
+<input type="checkbox" name="cpp" value="cpp">C++<br>
+<hr>
+
+<h3>file</h3>
+<input type="file" name="myfile">
+<hr>
+
+<h3>radio</h3>
+<input type="radio" name="gender" value="male" checked> 남자<br>
+<input type="radio" name="gender" value="female"> 여자<br>
+<hr>
+
+<h3>color</h3>
+<input type="color" name="color">
+<hr>
+
+<h3>date</h3>
+<input type="date" name="birthday">
+<hr>
+
+<h3>number</h3>
+<input type="number" name="quantity" min="1" max="10" step="1" value="1">
+<hr>
+
+<h3>range</h3>
+<input type="range" name="points" min="0" max="10" step="1" value="5">
+<hr>
+
+<h3>reset</h3>
+<input type="reset">
+<hr>
+
+<h3>time</h3>
+<input type="time" name="mytime">
+<hr>
+```
+
+추가로 `placeholder`라는 속성도 때에 따라 유용하게 사용 할 수 있습니다.<br>
+우리가 입력창에서 자주 보았던 '아이디를 입력하세요'와 같은 가이드 문구를 지정하는데 사용하는 속성입니다.<br>
+`placeholder`속성을 사용하여 입력한 값은 입력 칸 안에 나타나며, 입력 칸을 클릭하여 값을 입력하면 해당 문구가 사라지는 것을 볼 수 있습니다.<br>
+`placeholder`속성과 비슷하지만 조금 다른 속성이 하나 더 있습니다, `value`입니다.<br>
+`value`는 말 그대로 값을 할당하는 속성이기 때문에 `<input>`에서 `value`에 값을 넣으면 그 값이 입력 칸 안에 나타나는 것은 `placeholder`와 동일하나, 입력 칸을 클릭하더라도 값이 남아 있는 것을 볼 수 있습니다.<br>
+
+```
+<h3>회원가입</h3>
+<form action="my-app" method="get">
+	<div>
+		<label for="userid">아이디: </label>
+		<input type="text" id="userid" name="id" placeholder="아이디를 입력하세요.">
+	</div>
+	<div>
+		<label for="password">비밀번호: </label>
+		<input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요.">
+	</div>
+</form>
+```
+
+위 코드를 실행해보면 `type="password"`는 `text`와 다르게 입력 칸에 값을 입력하면 별표로 표시되어 노출되지 않음을 볼 수 있습니다.
+`<label>`태그는 입력 양식의 역할이 무엇인지 알려주는 이름표 역할을 수행합니다.
+`<label>`태그의 `for`속성과 `<input>`태그의 `id`속성 한 세트로 봅니다.
+`<label>`태그에 해당하는 이름표를 클릭하면 입력 칸이 활성화 되듯이 테두리가 파랗게 빛나는 것을 볼 수 있습니다.
