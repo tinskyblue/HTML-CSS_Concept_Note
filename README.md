@@ -13,6 +13,7 @@ HTML
 6. [멀티미디어 관련 태그](https://github.com/tinskyblue/HTML-CSS_Concept_Note/blob/master/concept_Note/HTML_multimedia_tag.md/)
 7. [입력 양식(form)](https://github.com/tinskyblue/HTML-CSS_Concept_Note/blob/master/concept_Note/HTML_form.md/)
 8. [표(Table)](https://github.com/tinskyblue/HTML-CSS_Concept_Note/blob/master/concept_Note/HTML_table.md/)
+9. [리스트(list)](https://github.com/tinskyblue/HTML-CSS_Concept_Note/blob/master/concept_Note/HTML_list.md/)
 
 CSS
 
