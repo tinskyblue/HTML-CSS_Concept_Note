@@ -20,10 +20,10 @@ name 속성은 form 요소의 이름을 지정해주는 속성으로 한 문서 
 
 ```
 <form name="joinForm" action="https://www.naver.com/" method="get">
-  <label for="name">이름</label>
-  <input id="name" name="name" type="text" />
-  <button type="submit">네이버로 이동!</button>
-  <button type="reset">리셋</button>
+	<label for="name">이름</label>
+	<input id="name" name="name" type="text" />
+	<button type="submit">네이버로 이동!</button>
+	<button type="reset">리셋</button>
 </form>
 ```
 
@@ -129,14 +129,14 @@ HyperText Transfer Protocol의 약자로 HTTP 혹은 HTTP 프로토콜이라고 
 
 ```
 <form action="URL" method="get">
-	<div>
-		<label for="userid">아이디: </label>
-		<input type="text" id="userid" name="id" placeholder="아이디를 입력하세요.">
-	</div>
-	<div>
-		<label for="password">비밀번호: </label>
-		<input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요.">
-	</div>
+  <div>
+    <label for="userid">아이디: </label>
+    <input type="text" id="userid" name="id" placeholder="아이디를 입력하세요.">
+  </div>
+  <div>
+    <label for="password">비밀번호: </label>
+    <input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요.">
+  </div>
 </form>
 ```
 
@@ -152,9 +152,9 @@ HyperText Transfer Protocol의 약자로 HTTP 혹은 HTTP 프로토콜이라고 
 
 ```
 <select name="job" id="job">
-	<option value="student">학생</option>
-	<option value="teacher">선생님</option>
-	<option value="etc">기타</option>
+  <option value="student">학생</option>
+  <option value="teacher">선생님</option>
+  <option value="etc">기타</option>
 </select>
 ```
 
@@ -167,10 +167,10 @@ HyperText Transfer Protocol의 약자로 HTTP 혹은 HTTP 프로토콜이라고 
 
 ```
 <form>
-	<div>
-		<label for="introduce">자기소개: </label>
-		<textarea name="introduce" id="introduce" placeholder="자기소개를 입력하세요" cols="20" rows="6"></textarea>
-	</div>
+  <div>
+    <label for="introduce">자기소개: </label>
+    <textarea name="introduce" id="introduce" placeholder="자기소개를 입력하세요" cols="20" rows="6"></textarea>
+  </div>
 </form>
 ```
 
@@ -183,12 +183,12 @@ HyperText Transfer Protocol의 약자로 HTTP 혹은 HTTP 프로토콜이라고 
 
 ```
 <form>
-	<div>
-		<label for="introduce">자기소개: </label>
-		<textarea name="introduce" id="introduce" placeholder="자기소개를 입력하세요" cols="20" rows="6"></textarea>
-		<button type="submit">제출</button>
-		<input type="reset">
-	</div>
+  <div>
+    <label for="introduce">자기소개: </label>
+    <textarea name="introduce" id="introduce" placeholder="자기소개를 입력하세요" cols="20" rows="6"></textarea>
+    <button type="submit">제출</button>
+    <input type="reset">
+  </div>
 </form>
 ```
 
