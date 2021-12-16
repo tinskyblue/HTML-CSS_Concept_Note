@@ -129,7 +129,7 @@ HyperText Transfer Protocol의 약자로 HTTP 혹은 HTTP 프로토콜이라고 
 
 ```
 <h3>회원가입</h3>
-<form action="my-app" method="get">
+<form action="URL" method="get">
 	<div>
 		<label for="userid">아이디: </label>
 		<input type="text" id="userid" name="id" placeholder="아이디를 입력하세요.">
