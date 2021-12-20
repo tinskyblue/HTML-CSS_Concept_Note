@@ -20,3 +20,4 @@ CSS
 1. [CSS 소개](https://github.com/tinskyblue/HTML-CSS_Concept_Note/blob/master/concept_Note/CSS_introduce.md/)
 2. [웹 크기 단위](https://github.com/tinskyblue/HTML-CSS_Concept_Note/blob/master/concept_Note/CSS_web_size_unit.md/)
 3. [CSS의 색상](https://github.com/tinskyblue/HTML-CSS_Concept_Note/blob/master/concept_Note/CSS_color.md/)
+4. [선택자](https://github.com/tinskyblue/HTML-CSS_Concept_Note/blob/master/concept_Note/CSS_selector.md/)
