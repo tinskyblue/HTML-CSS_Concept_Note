@@ -140,3 +140,46 @@ border-radius 또한 shortcut이 가능합니다.
 	border-radius: 8px 16px 24px 36px / 36px 24px 16px 8px;
 }
 ```
+
+## Padding과 Margin
+
+padding과 margin은 border의 내부와 외부에 존재하는 여백입니다.<br>
+`border`를 기준으로 경계선 내부 여백을 패딩(Padding), 경계선 외부 여백을 마진(Margin)이라고 합니다.<br>
+패딩과 마진 둘 모두 border처럼 네 방향 따로 혹은 한꺼번에 적용을 할 수 있습니다.
+
+```
+margin: 12px 24px 32px 63px; /* 상 우 하 좌 */
+padding: 6px 12px 24px 32px; /* 상 우 하 좌 */
+```
+
+### 마진 상쇄
+
+마진과 패딩은 비슷하지만 서로 다른 두 요소를 위 아래로 배치하면 마진은 서로 맞닿는 부분이 상쇄됩니다.
+두개의 박스가 맞닿는 부분의 마진이 20px, 20px일 경우 40px가 아니라 20px입니다.
+
+```
+body { background: skyblue;}
+.box {
+	display: inline-box;
+	width: 100px;
+	height: 100px;
+}
+#top{
+	background: pink;
+	margin-bottom: 20px;
+}
+#bottom {
+	background: lemonchiffon;
+	margin-top: 40px;
+}
+```
+
+## box-sizing
+
+`box-sizing`은 박스의 크기를 화면에 표시하는 방식을 변경하는 속성입니다.<br>
+width와 height는 요소(Element)의 콘텐츠의 크기를 지정합니다. 따라서, 테두리가 있는 경우에는 테두리의 두께로 인해서 원하는 크기를 찾기 어렵습니다.<br>
+`box-sizing` 속성의 기본 값은 `box-sizing: content-box;`로 `content-box`를 기준으로 크기를 정합니다.<br> 
+`box-sizing` 속성을 `border-box`로 지정하면 `border-box`의 크기는 `border` 바로 전 `padding`까지를 기준으로 정해집니다. 이렇게 하면 테두리를 포함한 크기를 지정할 수 있기 때문에 예측하기가 더 쉽습니다.<br>
+
+- `box-sizing: content-box;`<br>width(height) = content size
+- `box-sizing: border-box;`<br>width(height) = content size + padding + border size
