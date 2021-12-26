@@ -87,3 +87,44 @@ font: font-style font-weight size font-family;
 
 `font-style`, `font-weight`, `font-size`, `font-family`를 순서대로 작성하면 됩니다.<br>
 `font-style`과 `font-weight`는 생략해도 무관하지만 순서는 반드시 지키셔야 합니다.
+
+# 텍스트 정렬
+
+워드나 한글 같은 문서 편집기에서 흔히 볼 수 있는 텍스트의 정렬과 관련된 기능들이 CSS에도 존재합니다.
+
+## text-align
+
+`text-align` 프로퍼티는 좌, 우, 중앙 정렬 기능입니다. 텍스트의 가로 맞춤을 설정하는데 사용됩니다.<br>
+값으로 **left, center, right**를 사용할 수 있습니다. 정렬의 기준은 **본인** 기준입니다.<br>
+
+```
+p {
+  text-align: right;
+}
+```
+
+## line-height
+
+`line-height`는 문장 사이의 간격을 조정하는 프로퍼티로 px와 같이 단위가 존재하는 값 또는 단위가 없는 숫자 값으로 높이를 조정합니다.<br>
+단위 없는 숫자 값은 해당 요소의 `font-size`를 기준으로 한 배수로 높이를 조정합니다.<br>
+CSS에서 `line-height`는 글자의 중앙을 기준으로 위 아래 높이 간격을 뜻합니다.
+
+```
+p {
+  font-size: 5px;
+}
+line {
+  line-height: 10px;
+}
+line2 {
+  line-height: 2;
+}
+```
+
+## letter-spacing
+
+`letter-spacing`은 글자 사이의 간격을 조정합니다<br>
+
+## text-indent
+
+`text-indent`는 문단의 시작부에 들여쓰기를 지정합니다.
