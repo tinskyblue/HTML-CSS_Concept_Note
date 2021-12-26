@@ -1,6 +1,6 @@
 # 폰트(Font)
 
-폰트와 관련된 프로퍼티는 크게 폰트 크기(`font-size`), 폰트 종류(`font-family`), 폰트 형태(`font-style`, `fontweight`)가 있습니다.
+폰트와 관련된 프로퍼티는 크게 폰트 크기(`font-size`), 폰트 종류(`font-family`), 폰트 형태(`font-style`, `font-weight`)가 있습니다.
 
 ## font-family
 
