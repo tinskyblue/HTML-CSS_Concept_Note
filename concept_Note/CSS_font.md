@@ -26,9 +26,11 @@ font-family: '폰트이름1' '폰트이름2';
 `<link>`는 HTML에 CSS 파일을 연결할 때와 동일하게 `<link>` 태그를 이용하여 가져옵니다.<br>
 반면 `@import`는 CSS파일에서는 `<style>`태그를 제거하고 `@import`를 바로 작성하거나 HTML 파일에 `<style>` 태그를 이용하여 추가할 수 있습니다.
 
-## 폰트의 크기와 형태
+# 폰트의 크기와 형태
 
-## `<strong>`볼드체, `<em>`이탤릭체
+## font-style
+
+### `<strong>`볼드체, `<em>`이탤릭체
 
 과정
 ```
@@ -42,7 +44,7 @@ font-family: '폰트이름1' '폰트이름2';
 <em>이탤릭체</em>
 </pre>
 
-## `<sup>`일반 위치보다 위로, `<sub>`일반 위치보다 아래로
+### `<sup>`일반 위치보다 위로, `<sub>`일반 위치보다 아래로
 
 과정
 ```
@@ -56,7 +58,7 @@ font-family: '폰트이름1' '폰트이름2';
 <p>일반<sub>위치보다 아래로</sub></p>
 </pre>
 
-## `<ins>`문장 아래 밑줄, `<del>`취소선
+### `<ins>`문장 아래 밑줄, `<del>`취소선
 
 과정
 ```
@@ -69,3 +71,19 @@ font-family: '폰트이름1' '폰트이름2';
 <ins>문장 아래 밑줄</ins>
 <del>취소선</del>
 </pre>
+
+## font-weight
+
+`font-weight`는 폰트의 굵기를 지정할 때 사용합니다. bold 혹은 100단위의 숫자 값 등을 사용할 수 있습니다.<br>
+숫자 값은 100부터 900까지 가능하며 보통 normal 폰트가 400, bold폰트가 700의 값을 가집니다.
+
+## font 프로퍼티
+
+일일이 font 관련 프로퍼티를 적용할 수도 있지만 font 프로퍼티를 사용하면 모든 과정을 한번에 설정할 수 있습니다.
+
+```
+font: font-style font-weight size font-family;
+```
+
+`font-style`, `font-weight`, `font-size`, `font-family`를 순서대로 작성하면 됩니다.<br>
+`font-style`과 `font-weight`는 생략해도 무관하지만 순서는 반드시 지키셔야 합니다.
