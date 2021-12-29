@@ -46,18 +46,104 @@ html 태그는 각각 다른 `display` 프로퍼티 값을 가지고있으며 bl
 
 #### display: inline-block
 
+`display: inline`에서 `width`, `height`, `margin-top`, `margin-bottom` 프로퍼티가 적용되지 않아 불편함이 발생하여 이를 해결하기 위해 `display: inline-block`가 등장합니다.<br>
+`inline-block`은 `block`과 `inline`의 특징을 모두 가집니다<br>
+기본적인 쓰임은 `inline`과 동일하지만 사용할 수 없었던 `width`, `height`, `margin-top`, `margin-bottom`을 지정할 수 있습니다.
+
 #### display: none
+
+`display: none`으로 설정하면 브라우저에 해당 요소가 출력되지 않습니다.<br>
+주로 자바스크립트를 이용하여 요소를 사라지거나 나타나게 할 때 쓰입니다.
 
 ## position
 
+**position**은 이름 그대로 요소를 배치하는 방법을 정하는 프로퍼티입니다.<br>
+`static`, `relative`, `absolute`, `fixed` 네 가지 값을 주로 사용합니다.
+
 ### position: static
+
+`position`의 기본 값입니다.<br>
+`static`에서는 `top`, `right`, `bottom`, `left`와 같은 좌표 프로퍼티를 사용할 수 없습니다.
 
 ### position: relative
 
+**relative**는 상대 위치입니다.<br>
+기본 위치를 기준으로 좌표 프로퍼티를 사용하여 위치를 이동합니다. 여기서 기본 위치란 static일 때의 위치입니다.<br>
+
+```
+.relative {
+  position: relative;
+  background pink;
+  left: 16px;
+  top: 16px;
+}
+```
+
+해당 요소가 `position:static` 이었을 때의 위치에서 left와 top으로 16px 만큼 멀어집니다.
+
 ### position: absolute
+
+**absolute**는 절대 위치입니다.<br>
+부모 요소나 조상 요소 중 `relative, `absolute` 혹은 `fixed`가 선언된 곳을 기준으로 좌표 프로퍼티가 작동합니다.<br>
+만약 부모나 조상 프로퍼티에 `relative, `absolute` 혹은 `fixed`가 선언된 곳이 없다면 최상단 태그인 `<body>`를 기준으로 위치가 지정됩니다.
 
 ### position: fixed
 
+`fixed`는 보이는 화면을 기준으로 좌표 프로퍼티를 이용하여 위치를 고정시킵니다.<br>
+우리가 자주 보는 화면을 스크롤할 때 따라다니는 메뉴가 바로 `fixed`를 활용한 겁니다.
+
+```
+.fixed {
+  position: fixed;
+  right: 16px;
+  top: 16px;
+  background-color: pink;
+}
+```
+
 ### z-index
 
+`position`과 함께 쓰이는 프로퍼티로 `top`, `right`, `bottom`, `left` 이외에 `z-index`도 있습니다.<br>
+`z-index`를 통해 수직으로 어떻게 쌓이는지 정하는 프로퍼티로, 값은 숫자로 표현됩니다. 숫자가 클수록 전면에 출력됩니다.<br>
+`static`을 제외할 요소에서만 적용됩니다.
+
+```
+<!-- HTML -->
+<div class="parent">
+	<div class="box top">top</div>
+	<div class="box middle">middle</div>
+	<div class="box bottom">bottom</div>
+</div>
+
+/* CSS */
+.box {
+	width: 100px;
+	height: 50px;
+	position: absolute;
+}
+.parent {
+	position: relative;
+	border: 2px solid red;
+	width: 200px;
+	height: 100px;
+}
+.top {
+	background-color: pink;
+	right: 16px;
+	bottom: 16px;
+	z-index: 3;
+}
+.middle {
+	background-color: skyblue;
+	right: 32px;
+	bottom: 32px;
+	z-index: 2;
+}
+.bottom {
+	background-color: lemonchiffon;
+	right: 48px;
+	bottom: 48px;
+	z-index: 1;
+}
+```
 ## float
