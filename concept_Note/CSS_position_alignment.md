@@ -194,7 +194,85 @@ flexbox를 쓰려면 정렬하고자 하는 요소의 부모 요소인 flex cont
 	display: flex;
 }
 .child { /* 배치, 정렬하고자 하는 요소 */
-
 }
 ```
+
+flex 아이템들은 가로 방향으로 배치되고, 자신이 가진 내용물의 width 만큼만 차지하게 됩니다.<br>
+height는 컨테이너의 높이만큼 늘어나니까 컬럼 레이아웃같은걸 만들 때 좋습니다. height는 정렬 속성을 통해 조정할 수 있습니다.<br>
+아이템들이 배치된 방향의 축을 메인축(Main Axis), 메인축과 수직인 축을 수직축 또는 교차축(Cross Axis)라고 부릅니다.
+
+### 부모 요소 프로퍼티 flex-direction 배치 방향 설정
+
+아이템들이 배치되는 축의 방향을 결정하는 속성입니다.<br>
+"메인축의 방향을 가로로 할거냐 세로로 할거냐"를 정해주는 프로퍼티입니다.<br>
+
+```
+.container {
+	flex-direction: row; /* 행(가로) */
+	flex-direction: row-reverse; /* 행(가로) 역순 */
+	flex-direction: column; /* 열(세로) */
+	flex-direction: column-reverse; /* 열(세로) 역순 */
+}
+```
+
+### 부모 요소 프로퍼티 flex-wrap 줄넘김 처리 설정
+
+컨테이너가 더 이상 아이템들을 한 줄에 담을 여유 공간이 없을 때 아이템 줄바꿈을 어떻게 할지 결정하는 속성입니다.<br>
+컨테이너의 width가 너무 작아 item을 더 줄일수 없게 되면 item이 컨테이너를 벗어 납니다. 이를 해결하기 위한 속성입니다.<br>
+
+flex-direction이 row일 경우
+|flex-direction|row|
+|:---:|:---:|
+|1|2|
+|3|4|
+|5|6|
+
+flex-direction이 cloumn일 경우
+|flex-direction|cloumn||
+|:---:|:---:|:---:|
+|1|3|5|
+|2|4|6|
+
+```
+.container {
+	flex-wrap: nowrap; /* 기본 값 */
+	flex-wrap: wrap; /* 줄바꿈을 합니다. */
+	flex-wrap: wrap-reverse; /* 역순으로 줄바꿈합니다. */
+```
+
+### 부모 요소 프로퍼티 flex-flow
+
+`flex-direction`과 `flex-wrap`을 한꺼번에 지정할 수 있는 단축 속성입니다.<br>
+`flex-direction`, `flex-wrap`의 순으로 한 칸 때고 써주시면 됩니다.
+
+```
+.container {
+	flex-flow: row wrap;
+	/* flex-direction:row;, flex-wrap: wrap; */
+}
+```
+
+### 부모 요소 프로퍼티 jstify-content 메인축 방향 정렬
+
+justify는 메인축 방향으로 아이템들을 정렬하는 속성입니다.<br>
+
+```
+.container {
+	justify-content: flex-start; /* 기본 값으로 아이템들을 시작점으로 정렬합니다. */
+	justify-content: flex-end; /* 아이템들을 끝점으로 정렬합니다. */
+	justify-content: center; /* 아이템들을 가운데로 정렬합니다. */
+	justify-content: space-between; /* 아이템들의 "사이(between)"에 균일한 간격을 만듭니다. */
+	justify-content: space-around; /* 아이템들의 "둘레(around)"에 균일한 간격을 만듭니다. */
+	justify-content: space-evenly; /* 아이템들의 사이와 양 끝에 균일한 간격을 만듭니다. IE와 엣지(Edge)에서는 지원되지 않습니다. */
+}
+```
+
+![image](https://user-images.githubusercontent.com/57892556/147877775-cb66e622-8f0f-4a11-b856-ef8c5d14818e.png)
+
+![image](https://user-images.githubusercontent.com/57892556/147877782-f92ca51a-67fc-44a2-a370-aaf7fbb51ea3.png)
+
+
+
+
+
 
