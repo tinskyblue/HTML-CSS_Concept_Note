@@ -271,8 +271,7 @@ justify는 메인축 방향으로 아이템들을 정렬하는 속성입니다.<
 
 ![image](https://user-images.githubusercontent.com/57892556/147877782-f92ca51a-67fc-44a2-a370-aaf7fbb51ea3.png)
 
+### baseline
 
-
-
-
-
+`justify-content`와 `align-items`에서 모두 사용이 가능한 속성으로 아이템들을 텍스트 베이스라인 기준으로 정렬합니다.<br>
+글자 크기가 서로 다른 글자들을 적용해야 할 경우 사용합니다.
