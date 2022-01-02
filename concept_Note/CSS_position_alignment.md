@@ -159,3 +159,42 @@ html 태그는 각각 다른 `display` 프로퍼티 값을 가지고있으며 bl
 	float: left;
 }
 ```
+
+## flexbox
+
+flexbox는 크기가 불분명한 요소들을 효율적으로 동작시키고 특별한 계산 없이 정렬할 수 있습니다.
+부모 요소인 flex container와 자식 요소인 flex item으로 구성되어 있으며 부모 요소와 자식 요소에는 사용할 수 있는 프로퍼티에 차이가 있습니다.
+
+부모 요소
+- flex-direction
+- flex-wrap
+- flex-flow
+- justify-content
+- align-items
+- align-content
+
+자식 요소
+- flex
+- flex-grow
+- flex-shrink
+- flex-basis
+- order
+
+flexbox를 쓰려면 정렬하고자 하는 요소의 부모 요소인 flex container에 `display: flex;`를 추가하면 됩니다.
+`display: flex;`를 사용하지 않으면 flex는 사용 할 수 없습니다.
+
+```
+<!-- HTML -->
+<div class="parent">
+	<div class="child">child</div>
+</div>
+
+/* css */
+.parent { /* 배치, 정렬하고자 하는 요소를 감싸는 부모 요소 */
+	display: flex;
+}
+.child { /* 배치, 정렬하고자 하는 요소 */
+
+}
+```
+
