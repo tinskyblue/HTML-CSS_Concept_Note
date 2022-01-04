@@ -271,7 +271,36 @@ justify는 메인축 방향으로 아이템들을 정렬하는 속성입니다.<
 
 ![image](https://user-images.githubusercontent.com/57892556/147877782-f92ca51a-67fc-44a2-a370-aaf7fbb51ea3.png)
 
-### baseline
+### align-items 수직축 방향 정렬
 
-`justify-content`와 `align-items`에서 모두 사용이 가능한 속성으로 아이템들을 텍스트 베이스라인 기준으로 정렬합니다.<br>
-글자 크기가 서로 다른 글자들을 적용해야 할 경우 사용합니다.
+`align-items`는 기본값으로 stretch를 갖습니다.<br>
+이는 별다른 크기가 지정되지 않았을 때 flex 아이템을 부모 요소의 크기만큼 늘려서 맞춰줍니다.<br>
+`align-items: flex-start`를 추가하면 높이가 콘텐츠의 크기만큼 바뀝니다.<br>
+이와 같이 `align-items: center`와 `align-items: flex-end`가 존재합니다.
+
+```
+.container {
+	align-items: stretch; /* 기본값 */
+	align-items: flex-start; /* 아이템들을 시작점으로 정렬합니다. row일 때는 위 column일 때는 왼쪽 */
+	align-items: flex-end; /* 아이템들을 끝으로 정렬합니다 row일 떄는 아래 column일 때는 오른쪽 */
+	align-items: center; /* 아이템들을 가운데로 정렬합니다 */
+	align-items: baseline; /* 아이템들을 텍스트 베이스라인을 기준으로 정렬합니다. 글자 크기가 서로 다른 글자들을 적용해야 할 경우 사용합니다. */
+}
+```
+
+### align-content 여러 행 정렬
+
+flex-wrap: wrap;이 설정된 상태에서, 아이템들의 행이 2줄 이상 일 경우 수직축 방향 정렬을 결정하는 속성입니다.
+
+```
+.container {
+	flex-wrap: wrap;
+	align-content: stretch;
+	align-content: flex-start;
+	align-content: flex-end;
+	align-content: center;
+	align-content: space-between;
+	align-content: space-around;
+	align-content: space-evenly;
+}
+```
