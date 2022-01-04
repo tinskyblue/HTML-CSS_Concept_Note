@@ -165,7 +165,7 @@ html 태그는 각각 다른 `display` 프로퍼티 값을 가지고있으며 bl
 flexbox는 크기가 불분명한 요소들을 효율적으로 동작시키고 특별한 계산 없이 정렬할 수 있습니다.
 부모 요소인 flex container와 자식 요소인 flex item으로 구성되어 있으며 부모 요소와 자식 요소에는 사용할 수 있는 프로퍼티에 차이가 있습니다.
 
-부모 요소
+flex container 부모 요소
 - flex-direction
 - flex-wrap
 - flex-flow
@@ -173,7 +173,7 @@ flexbox는 크기가 불분명한 요소들을 효율적으로 동작시키고 �
 - align-items
 - align-content
 
-자식 요소
+flex item 자식 요소
 - flex
 - flex-grow
 - flex-shrink
@@ -271,7 +271,7 @@ justify는 메인축 방향으로 아이템들을 정렬하는 속성입니다.<
 
 ![image](https://user-images.githubusercontent.com/57892556/147877782-f92ca51a-67fc-44a2-a370-aaf7fbb51ea3.png)
 
-### align-items 수직축 방향 정렬
+### 부모 요소 프로퍼티 align-items 수직축 방향 정렬
 
 `align-items`는 기본값으로 stretch를 갖습니다.<br>
 이는 별다른 크기가 지정되지 않았을 때 flex 아이템을 부모 요소의 크기만큼 늘려서 맞춰줍니다.<br>
@@ -288,7 +288,7 @@ justify는 메인축 방향으로 아이템들을 정렬하는 속성입니다.<
 }
 ```
 
-### align-content 여러 행 정렬
+### 부모 요소 프로퍼티 align-content 여러 행 정렬
 
 flex-wrap: wrap;이 설정된 상태에서, 아이템들의 행이 2줄 이상 일 경우 수직축 방향 정렬을 결정하는 속성입니다.
 
@@ -304,3 +304,85 @@ flex-wrap: wrap;이 설정된 상태에서, 아이템들의 행이 2줄 이상 �
 	align-content: space-evenly;
 }
 ```
+
+### 자식 요소 프로퍼티 flex-grow
+
+`flex-grow`는 flex item의 확장과 관련되어 있습니다.<br>
+단위 없는 숫자 값(비율)을 사용하며 기본값은 0입니다.<br>
+값이 0일 경우 flex container가 커져도 flex item의 크기는 커지지 않고 원래 크기를 유지합니다.<br>
+값이 1 이상일 경우 flex item의 원래 크기와 상관없이 flex container를 채우기 위해 flex item도 커집니다.<br>
+`flex-gorw`의 값이 1 이상이고 flex item이 여러 개라면 flex-grow의 값에 따라 flex container의 크기가 나눠집니다.<br>
+flex item이 3개고 값이 1, 2, 1 일 경우 1:2:1의 비율로 나눠집니다.<br>
+`flex-gorw`의 크기는 비율이기에 flex container의 크기는 커지거나 줄어들면 동일한 비율로 크기가 커지거나 줄어듭니다.
+
+### 자식 요소 프로퍼티 flex-shrink
+
+`flex-shirink`는 `flex-gorw`와 쌍을 이루는 속성으로, 축소와 관련되어 있습니다.<br>
+`flex-shirink`는 아이템이 `flex-basis`의 값보다 작아질 수 있는지를 결정합니다.<br>
+`flex-shrink에는 숫자값이 들어가고 0과 정수(비율)를 사용하며, 속성값이 0일 경우 flex container 크기가 flex item의 크기보다 작아져도 flex item의 크기가 줄어들지 않고 원래 크기를 유지합니다.<br>
+속성값이 1 이상이면 flex container의 크기가 작아질 때 flex item의 크기가 flex container의 크기에 맞춰 줄어듭니다.
+
+### flex-basis
+
+`flex-basis`는 flex item의 기본 크기를 결정하며, 기본값은 `auto`입니다.<br>
+단위로는 모든 크기 단위를 사용할 수 있는데, `auto`로 값이 설정되면 원래 콘텐츠의 크기가 할당됩니다.<br>
+(flex-direction이 row일 때는 너비, column일 때는 높이)
+
+```
+.item {
+	flex-basis: auto; /* 기본값. */
+	flex-basis: 0;
+	flex-basis: 50%;
+	flex-basis: 100px;
+	flex-basis: 10rem;
+	flex-basis: content; /* 콘텐츠의 크기로 width를 설정하지 않은 것과 같습니다. */
+}
+```
+
+`flex-basis`의 값으로는 width, height와 같은 각종 단위의 수가 들어갈 수 있습니다.<br>
+기본값 auto에는 해당 아이템의 width값을 사용합니다. 따로 설정을 안하면 콘텐츠의 크기가 됩니다.<br>
+3개의 박스가 존재하며 각 박스의 크기는 50px, 150px, 100px일 경우 flex-basis를 100px로 설정하면<br>
+50px의 박스는 100px로 늘어나고 150px와 100px로 설정한 박스는 변화가 없습니다.<br>
+반면에 width를 설정하면 모든 박스가 100px로 맞춰집니다.
+
+### flex
+
+`flex` 는 `flex-grow`, `flex-shrink`, `flex-basis`를 한 번에 쓸 수 있는 축약형 속성입니다.
+
+```
+.item {
+	flex: 1;
+	/* flex-grow: 1; flex-shrink: 1; flex-basis: 0%; */
+	flex: 1 1 auto;
+	/* flex-grow: 1; flex-shrink: 1; flex-basis: auto; */
+	flex: 1 100px;
+	/* flex-grow: 1; flex-shrink: 1; flex-basis: 100px; */
+}
+```
+
+### align-self 수직축으로 아이템 정렬
+
+`align-items`의 아이템 버전입니다.<br>
+`align-self`는 `align-items`보다 우선권이 있습니다. 전체 설정보다 각각의 개별 설정이 우선된다고 생각하시면 됩니다.
+
+```
+.item {
+	align-self: auto;
+	align-self: stretch;
+	align-self: flex-start;
+	align-self: flex-end;
+	align-self: center;
+	align-self: baseline;
+}
+```
+
+### order 배치 순서
+
+각 아이템들의 시각적 나열 순서를 결정합니다.<br>
+숫자값이 들어가며, 작은 숫자일 수록 먼저 배치됩니다.<br>
+시각적 순서일 뿐, HTML 자체의 구조는 변경되지 않기 때문에 접근성 측면에서 사용에 주의해야합니다.<br>
+시각 장애인분들이 사용하는 스크린 리더로 화면을 읽을 때, order를 이용해 순서를 바꾼 것은 의미가 없습니다.
+
+### z-index
+
+여기서도 `z-index`를 사용하여 Z축 정렬을 사용할 수 있습니다.
