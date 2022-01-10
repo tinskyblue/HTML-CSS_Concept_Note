@@ -422,9 +422,7 @@ Grid Area 안에 더 이상 쪼개지지 않는 한 칸을 Grid Cell이라고도
 
 Grid는 부모 요소인 **Grid Container**와 자식 요소인 **Grid items**로 구성되어 있으며, 각각 사용하는 프로퍼티가 다릅니다.<br>
 
-#### grid container: template
-
-##### display: grid / inline-grid
+#### display: grid / inline-grid
 
 Grid item들은 Grid Container안에 배치하기 때문에 display: grid;를 설정하는 것으로 시작합니다.
 `display: inline-grid;`는 block과 inline-block의 관계를 생각하시면 됩니다.
@@ -436,7 +434,7 @@ Grid item들은 Grid Container안에 배치하기 때문에 display: grid;를 �
 }
 ```
 
-##### grid-template-rows / grid-template-column
+#### grid-template-rows / grid-template-column
 
 컨테이너에 Grid Track의 크기들을 지정해주는 속성입니다.
 행에 해당하는 Grid Track은 `grid-template-rows` 열에 해당하는 Grid Track은 `grid-template-column`으로 지정할 수 있습니다.
@@ -453,7 +451,7 @@ Grid item들은 Grid Container안에 배치하기 때문에 display: grid;를 �
  }
  ```
  
- ##### row-gap / column-gap / gap
+#### row-gap / column-gap / gap
  
  그리드 셀 사이의 간격을 설정합니다.
  
@@ -468,3 +466,68 @@ Grid item들은 Grid Container안에 배치하기 때문에 display: grid;를 �
 초기에는 grid-gap이라고 grid-를 붙여서 사용했습니다
 IE에서는 gap의 대체 속성이 없기 때문에, IE와 구조를 통일해야하면 처음부터 gap을 사용하지 않고 구조를 설계하는게 좋습니다.
 
+#### grid container: auto
+
+##### grid-auto-rows / grid-auto-column
+
+`grid-auto-rows`와 `grid-auto-column`은 크기가 지정되지 않은 Grid Track의 크기를 지정할 수 있는 프로퍼티로
+`grid-template-rows`와 `grid-template-column`으로 Grid Track을 생성하면 기본 크기보다 콘텐츠 많을 경우 내용이 Cell을 벗어나기 때문에 `repeat(3, minmax(100px, auto)`같은 방법으로 최솟값과 최댓값을 지정해주면 내용에 따라 Cell이 자동으로 늘어납니다. 하지만 row의 개수를 미리 알 수 없는 경우에는 `grid-auto-rows`를 사용하면 됩니다.
+
+```
+.container {
+	grid-auto-rows: minmax(100px,auto);
+}
+```
+
+#### Grid 아이템 각 셀의 영역 지정
+
+- grid-column-start
+- grid-column-end
+- grid-column
+- grid-row-start
+- grid-row-end
+- grid-row
+
+![카드2](https://user-images.githubusercontent.com/57892556/148779193-b1fb4aed-c2a2-4e10-8bad-6058a5f41f2a.png)
+
+위에 이미지를 보면 1부터 4까지의 Grid 라인 번호가 매겨져있습니다.<br>
+이 번호를 이용해서 column과 row이 범위를 결정할 수 있습니다.<br>
+
+```
+.item {
+	grid-row-start: 1;
+	grid-row-end: 2;
+	grid-column-start: 1;
+	grid-column-end: 3;
+	/* grid-row 1/2;
+	   grid-column 1/3; */
+}
+```
+
+`grid-row 1/2;`와 `grid-column 1/3`는 빨강색 박스 영역입니다.
+초록색 박스 영역은 `grid-row 2/4;` `grid-column 3/4;`입니다.
+
+#### grid-template-areas
+ 
+`grid-template-areas`를 이용하여 Grid Area에 이름을 할당할 수 있습니다.<br>
+할당한 이름을 이용하여 각 영역을 배치하는 방법입니다.<br>
+
+![112](https://user-images.githubusercontent.com/57892556/148784163-af7f28a6-c71c-4feb-9f40-54e25c5a5236.JPG)
+
+```
+.container {
+	grid-template-areas:
+		"header header header"
+		"left center right"
+		"footer footer footer"
+}
+
+.header {grid-area: header;}
+.sidebar-a {grid-area: left;}
+.main-center {grid-area: center;}
+.sidebar-b {grid-area: right;}
+.footer {grid-area: footer;}
+
+```
+
+위의 형태로 각자 차지하는 셀의 개수만큼 해당 위치에 이름을 써주면 됩니다.<br>
