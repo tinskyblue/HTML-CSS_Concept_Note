@@ -543,7 +543,7 @@ Grid 배치의 기본 설정은 아이템이 row를 기준으로 순서대로 �
 설정은 `row`, `column`, `dense`, `row dense`, `column dense`가 있습니다.<br>
 dense는 기본적으로 빈 셀을 채우는 알고리즘으로, row와 column에 따라 기준이 달라집니다.
 
-#### align-items
+#### align-items (중복)
 
 `align-items`는 아이템들을 세로축 방향으로 정렬합니다. 컨테이너에 적용합니다.
 기본 설정은 stretch로 start, center, end가 존재합니다.
@@ -581,7 +581,7 @@ align, justify 순서로 작성하고, 하나의 값만 쓰면 두 속성 모두
 }
 ```
 
-#### align-content
+#### align-content (중복)
 
 Grid 아이템들의 높이를 모두 합한 값이 Grid 컨테이너의 높이보다 작을 때 Grid 아이템들을 통째로 정렬합니다.<br>
 `align-content: center;`는 Grid Container 기준 수직 방향으로 Grid Cell들을 중앙 정렬합니다.
@@ -626,7 +626,7 @@ align, justify 순서로 작성하고, 하나의 값만 쓰면 두 속성 모두
 }
 ```
 
-#### align-self
+#### align-self (중복)
 
 해당 아이템을 세로축 방향으로 정렬합니다. 아이템에 적용합니다.
 
@@ -653,7 +653,7 @@ align, justify 순서로 작성하고, 하나의 값만 쓰면 두 속성 모두
 ```
 #### place-self
 
-`align-self`와 `justify-self`의 단축 속성입니다.
+`align-self`와 `justify-self`의 단축 속성입니다.<br>
 align, justify 순서로 작성하고, 하나의 값만 쓰면 두 속성 모두 적용됩니다.
 
 ```
@@ -662,11 +662,12 @@ align, justify 순서로 작성하고, 하나의 값만 쓰면 두 속성 모두
 }
 ```
 
-#### order
+#### order (중복)
 
 각 아이템들의 시각적 나열 순서를 결정하는 속성입니다.
+숫자값이 들어가며, 작은 숫자일 수록 먼저 배치됩니다.
 
+#### z-index (중복)
 
-#### z-index
-
+z-index로 Z축 정렬을 할 수 있습니다. 숫자가 클 수록 위로 올라옵니다.
 position이랑 flex에서 나온거랑 똑같다고 생각하시면 됩니다.
