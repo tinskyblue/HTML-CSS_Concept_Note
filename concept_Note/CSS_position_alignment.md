@@ -537,4 +537,136 @@ IE에서는 gap의 대체 속성이 없기 때문에, IE와 구조를 통일해�
 
 #### grid-auto-flow
 
-아이템이 자동 배치되는 흐름을 결정하는 속성입니다.
+Grid가 자동 배치되는 방향을 결정하는 속성입니다.<br>
+Grid 배치의 기본 설정은 아이템이 row를 기준으로 순서대로 배치가 되다가 들어갈 자리가 없으면 그 칸을 비어두고 아래로 배치가 됩니다.<br>
+`grid-template-columns`이 5칸일 때 두개의 셀이 열을 3칸씩 차지하면 두칸을 비워두고 바로 아래 3칸이 배치됩니다.<br>
+설정은 `row`, `column`, `dense`, `row dense`, `column dense`가 있습니다.<br>
+dense는 기본적으로 빈 셀을 채우는 알고리즘으로, row와 column에 따라 기준이 달라집니다.
+
+#### align-items
+
+`align-items`는 아이템들을 세로축 방향으로 정렬합니다. 컨테이너에 적용합니다.
+기본 설정은 stretch로 start, center, end가 존재합니다.
+
+```
+.container {
+	align-items: strech;
+	/* align-items: start; */
+	/* align-items: center; */
+	/* align-items: end */
+}
+```
+
+#### justify-items
+
+'justify-items`는 아이템들을 가로축 방향으로 정렬합니다. 똑같이 컨테이너에 적용합니다.
+
+```
+.container {
+	justify-items: strech;
+	/* justify-items: start; */
+	/* justify-items: center; */
+	/* justify-items: end */
+}
+```
+
+#### place-items
+
+align-items와 justify-items의 단축 속성입니다.
+align, justify 순서로 작성하고, 하나의 값만 쓰면 두 속성 모두에 적용합니다.
+
+```
+.container {
+	place-items: start center;
+}
+```
+
+#### align-content
+
+Grid 아이템들의 높이를 모두 합한 값이 Grid 컨테이너의 높이보다 작을 때 Grid 아이템들을 통째로 정렬합니다.<br>
+`align-content: center;`는 Grid Container 기준 수직 방향으로 Grid Cell들을 중앙 정렬합니다.
+
+```
+.container {
+	align-content: stretch;
+	/* align-content: start; */
+	/* align-content: center; */
+	/* align-content: end; */
+	/* align-content: space-between; */
+	/* align-content: space-around; */
+	/* align-content: space-evenly; */
+}
+```
+
+#### justify-content
+
+Grid 아이템들의 너비를 모두 합한 값이 Grid 컨테이너의 너비보다 작을 때 Grid 아이템들을 통째로 정렬합니다.
+`justify-items: center;`는 Grid Cell 혹은 Grid Area 기준 수평 방향으로 Grid Item을 중앙 정렬합니다.
+
+```
+.container {
+	align-content: stretch;
+	/* align-content: start; */
+	/* align-content: center; */
+	/* align-content: end; */
+	/* align-content: space-between; */
+	/* align-content: space-around; */
+	/* align-content: space-evenly; */
+}
+```
+
+#### place-content
+
+`align-content`와 `justify-content`의 단축 속성입니다.
+align, justify 순서로 작성하고, 하나의 값만 쓰면 두 속성 모두 적용됩니다.
+
+```
+.container {
+	place-content: space-around space-evenly;
+}
+```
+
+#### align-self
+
+해당 아이템을 세로축 방향으로 정렬합니다. 아이템에 적용합니다.
+
+```
+.item {
+	align-self: stretch;
+	/* align-self: start; */
+	/* align-self: center; */
+	/* align-self: end; */
+}
+```
+
+#### justify-self
+
+해당 아이템을 가로축 방향으로 정렬합니다. 아이템에 적용합니다.
+
+```
+.item {
+	justify-self: stretch;
+	/* justify-self: start; */
+	/* justify-self: center; */
+	/* justify-self: end; */
+}
+```
+#### place-self
+
+`align-self`와 `justify-self`의 단축 속성입니다.
+align, justify 순서로 작성하고, 하나의 값만 쓰면 두 속성 모두 적용됩니다.
+
+```
+.item {
+	place-self: start center;
+}
+```
+
+#### order
+
+각 아이템들의 시각적 나열 순서를 결정하는 속성입니다.
+
+
+#### z-index
+
+position이랑 flex에서 나온거랑 똑같다고 생각하시면 됩니다.
