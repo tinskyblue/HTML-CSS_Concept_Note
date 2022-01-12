@@ -24,3 +24,4 @@ CSS
 5. [박스(Box) 모델](https://github.com/tinskyblue/HTML-CSS_Concept_Note/blob/master/concept_Note/CSS_box.md/)
 6. [글자(Text)](https://github.com/tinskyblue/HTML-CSS_Concept_Note/blob/master/concept_Note/CSS_text.md/)
 7. [위치 정렬](https://github.com/tinskyblue/HTML-CSS_Concept_Note/blob/master/concept_Note/CSS_position_alignment.md/)
+8. [상속과 우선순위](https://github.com/tinskyblue/HTML-CSS_Concept_Note/blob/master/concept_Note/CSS_Inheritance_%20Priority.md/)
