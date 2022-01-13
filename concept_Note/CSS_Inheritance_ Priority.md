@@ -19,31 +19,31 @@ CSS를 사용하면서 가끔 내가 스타일을 적용한 적이 없는데 자
 CSS의 약자는 Cascading Style Sheet입니다.<br>
 여기서 Cascading은 CSS 적용 우선순위를 뜻합니다. 이 적용 우선순위에는 세 가지의 규칙이 있습니다.
 
-- 1. 중요도
-- 2. 명시도
-- 3. 선언순서
+- 1.중요도
+- 2.명시도
+- 3.선언순서
 
 ### 중요도
 
 중요도는 CSS가 어디에 선언되었는지에 따라 우선순위가 달라집니다.
 
-- 1. `<head>` 태그 내의 `<style>` 태그
-- 2. `<head>` 태그 내의 `<style>` 태그 내의 `@import`문
-- 3. `<link>` 태그로 연결된 CSS
-- 4. `<link>` 태그로 연결된 CSS 내의 `@import` 문
-- 5. 브라우저 디폴트 스타일시트
+- 1.`<head>` 태그 내의 `<style>` 태그
+- 2.`<head>` 태그 내의 `<style>` 태그 내의 `@import`문
+- 3.`<link>` 태그로 연결된 CSS
+- 4.`<link>` 태그로 연결된 CSS 내의 `@import` 문
+- 5.브라우저 디폴트 스타일시트
 
 ### 명시도
 
 CSS는 명시도에 따라 우선순위가 달라집니다.
 
-- 1. `!important`
-- 2. 인라인 스타일 inline style
-- 3. 아이디 선택자 id selector
-- 4. 클래스, 속성, 가상클래스 선택자 class, attribute, pseudo class selector
-- 5. 태그 선택자 type selector
-- 6. 전체 선택자 universal selector
-- 7. 상속 `inherit`
+- 1.`!important`
+- 2.인라인 스타일 inline style
+- 3.아이디 선택자 id selector
+- 4.클래스, 속성, 가상클래스 선택자 class, attribute, pseudo class selector
+- 5.태그 선택자 type selector
+- 6.전체 선택자 universal selector
+- 7.상속 `inherit`
 
 ### 선언순서
 
