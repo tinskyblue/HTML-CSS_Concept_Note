@@ -1,0 +1,92 @@
+h1, h2, ul, p {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-image: url(images/bag.jpg);
+    background-color: #666;
+}
+
+.wrapper {
+    background-color: #ddd;
+    width: 800px;
+    margin: 50px auto;
+}
+
+.header {
+    background-image: url(images/bag2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    height: 400px;
+    text-align: center;
+}
+
+.header .profile {
+    margin-top: 50px;
+    border: 10px solid auto;
+    border-radius: 100px;
+}
+
+.header h1 {
+    color: orangered;
+    margin: 10px 0;
+}
+
+.header p {
+    background-color: black;
+    width: 250px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+.tistory, .github {
+    color: white;
+}
+
+.section {
+    background-image: url(images/icon-information.png);
+    background-repeat: no-repeat;
+    background-position: right 30px bottom;
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+}
+.section h2 {
+    color: orangered;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+}
+
+.section li {
+    padding: 13px 50px 8px;
+    background-image: url(images/jack.jpg);
+    background-repeat: no-repeat;
+}
+
+.section li:hover {
+    color: orangered;
+    border-color: orangered;
+    background-image: url(images/jack2.jpg);
+}
+
+.skills {
+    background-image: url(images/icon-skills.png);
+}
+
+.footer {
+    color: white;
+    background-color: black;
+    padding: 10px 0;
+    text-align: center;
+    letter-spacing: 5px;
+    text-indent: 5px;
+}
